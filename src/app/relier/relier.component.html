@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<div id="jeu">
+    <div class="conteneur nonResolu" *ngIf="paireNonResolue.length>0">
+        <div class="paire_gauche">
+            <button *ngFor="let paire of paireNonResolue" class="item">  
+             {{paire.partieGauche}}
+          </button>
+        </div>
+
+        <div class="paire_items droite">
+            <button *ngFor="let paire of paireNonResolue | shuffle:test" class="item"> 
+             {{paire.partieDroite}}
+          </button>
+        </div>
+    </div>
+    <div class="conteneur resolu" *ngIf="paireResolue.length>0">
+        <div *ngFor="let paire of paireResolue" class="paire">
+            <button>{{paire.partieGauche}}</button>
+            <div class="connecteur"></div>
+            <button>{{paire.partieDroite}}</button>
+        </div>
+    </div>
+</div>

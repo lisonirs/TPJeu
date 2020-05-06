@@ -1,0 +1,66 @@
+#jeu {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.conteneur {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.nonResolu {
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+
+.resolu {
+    margin-right: 25px;
+}
+
+.paire_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.item {
+    margin-right: 10px;
+}
+
+.paire {
+    margin-bottom: 25px;
+}
+
+.connecteur {
+    height: 5px;
+    background-color: lightgreen;
+}
+
+@media screen and (min-width: 600px) {
+    #jeu {
+        width: 50%;
+        margin: 0 auto;
+    }
+    .conteneur {
+        flex-direction: row;
+    }
+    .resolu {
+        margin-right: 10px;
+    }
+    .paire_items {
+        width: 30%;
+        flex-direction: column;
+    }
+    .item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    .paire {
+        margin-right: 25px;
+    }
+}
